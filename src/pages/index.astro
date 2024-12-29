@@ -1,32 +1,73 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
-const gridBlockTW = " border border-solid border-slate-700/50 rounded-lg ";
+const gridBlockTW =
+  " border border-solid border-slate-700/50 rounded-lg bg-slate-800/40 ";
 ---
 
 <Layout>
   <!-- App -->
-  <div class="max-w-6xl m-auto min-h-screen p-4 md:py-8">
-    <!-- Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-12 gap-2">
-      <div class={`${gridBlockTW} md:col-span-2 md:row-span-6`}>
-        01 - Summary/Hero
-        <h1>Luis Santiago</h1>
-        <small>@lusanco</small>
+  <div
+    class="min-h-screen p-4 md:py-8 bg-[url('./banner-blue.jpg')] bg-cover bg-fixed bg-repeat flex flex-col justify-center"
+  >
+    <!-- Wrapper for Centered Content -->
+    <div class="relative flex flex-col">
+      <!-- Grid Container -->
+      <div
+        class="max-w-4xl m-auto w-full grid grid-cols-1 md:grid-cols-4 md:grid-rows-12 gap-2"
+      >
+        <div
+          class={`${gridBlockTW} md:col-span-1 md:row-span-4 overflow-clip bg-[url('./profile-blue.jpg')] bg-cover bg-no-repeat relative`}
+        >
+          <div
+            class="p-2 text-xl font-extrabold text-slate-100/80 absolute text-right bottom-0 right-0 bg-slate-900/70 rounded-lg m-2"
+          >
+            Luis Santiago
+          </div>
+          <img
+            src="./profile-blue.jpg"
+            alt=""
+            class="m-auto invisible h-full w-full object-cover"
+          />
+        </div>
+        <div
+          class={`${gridBlockTW} md:col-span-2 md:row-span-6 overflow-clip bg-[url('./grid-blue/row-1-column-1.jpg')] bg-cover bg-no-repeat relative`}
+        >
+          01 - Summary/Hero
+          <h1>Luis Santiago</h1>
+          <small>@lusanco</small>
+        </div>
+        <div
+          class={`${gridBlockTW} md:row-span-8  overflow-clip bg-[url('./grid-blue/row-1-column-2.jpg')] bg-cover bg-no-repeat relative`}
+        >
+          03 - About/Contact
+        </div>
+        <div
+          class={`${gridBlockTW} md:row-span-4  overflow-clip bg-[url('./grid-blue/row-1-column-3.jpg')] bg-cover bg-no-repeat relative`}
+        >
+          04 - CV
+        </div>
+        <div
+          class={`${gridBlockTW} md:col-span-2 md:row-span-4 overflow-clip bg-[url('./grid-blue/row-2-column-1.jpg')] bg-cover bg-no-repeat relative`}
+        >
+          05
+        </div>
+        <div
+          class={`${gridBlockTW}  md:row-span-2 overflow-clip bg-[url('./grid-blue/row-2-column-2.jpg')] bg-cover bg-no-repeat relative`}
+        >
+          06
+        </div>
+        <div
+          class={`${gridBlockTW} md:row-span-2 overflow-clip bg-[url('./grid-blue/row-2-column-3.jpg')] bg-cover bg-no-repeat relative`}
+        >
+          07
+        </div>
+        <div
+          class={`${gridBlockTW} md:row-span-1 md:col-span-4 overflow-clip bg-[url('./grid-blue/row-3-column-1.jpg')] bg-cover bg-no-repeat relative`}
+        >
+          08
+        </div>
       </div>
-      <div class={`${gridBlockTW} md:col-span-1 md:row-span-4 overflow-clip`}>
-        <img
-          src="./profile-square-close.jpg"
-          alt=""
-          class="m-auto h-full w-full object-cover"
-        />
-      </div>
-      <div class={`${gridBlockTW} md:row-span-8`}>03 - About/Contact</div>
-      <div class={`${gridBlockTW} md:row-span-4`}>04 - CV</div>
-      <div class={`${gridBlockTW}md:col-span-2`}>05</div>
-      <div class={`${gridBlockTW} md:col-span-3 md:row-span-2`}>06</div>
-      <div class={`${gridBlockTW}`}>07</div>
-      <div class={`${gridBlockTW}`}>08</div>
     </div>
   </div>
 </Layout>
