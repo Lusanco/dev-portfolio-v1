@@ -1,0 +1,32 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const gridBlockTW = " border border-solid border-slate-700/50 rounded-lg ";
+---
+
+<Layout>
+  <!-- App -->
+  <div class="max-w-6xl m-auto min-h-screen p-4 md:py-8">
+    <!-- Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-12 gap-2">
+      <div class={`${gridBlockTW} md:col-span-2 md:row-span-6`}>
+        01 - Summary/Hero
+        <h1>Luis Santiago</h1>
+        <small>@lusanco</small>
+      </div>
+      <div class={`${gridBlockTW} md:col-span-1 md:row-span-4 overflow-clip`}>
+        <img
+          src="./profile-square-close.jpg"
+          alt=""
+          class="m-auto h-full w-full object-cover"
+        />
+      </div>
+      <div class={`${gridBlockTW} md:row-span-8`}>03 - About/Contact</div>
+      <div class={`${gridBlockTW} md:row-span-4`}>04 - CV</div>
+      <div class={`${gridBlockTW}md:col-span-2`}>05</div>
+      <div class={`${gridBlockTW} md:col-span-3 md:row-span-2`}>06</div>
+      <div class={`${gridBlockTW}`}>07</div>
+      <div class={`${gridBlockTW}`}>08</div>
+    </div>
+  </div>
+</Layout>
