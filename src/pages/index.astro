@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 
 const gridBlockTW =
-  " border border-solid border-slate-700/50 rounded-lg bg-slate-800/40 ";
+  " border border-solid border-slate-700/50 rounded-lg bg-slate-800/40 bg-cover bg-no-repeat relative lg:hover:scale-105 hover:z-50 transition-all duration-150 hover:shadow-xl hover:shadow-slate-950/50 overflow-clip hover:border-slate-100/70 hover:border-4";
 ---
 
 <Layout>
@@ -17,13 +17,13 @@ const gridBlockTW =
         class="max-w-4xl m-auto w-full grid grid-cols-1 md:grid-cols-4 md:grid-rows-12 gap-2"
       >
         <div
-          class={`${gridBlockTW} md:col-span-1 md:row-span-4 overflow-clip bg-[url('./profile-blue.jpg')] bg-cover bg-no-repeat relative`}
+          class={`${gridBlockTW} md:col-span-2 lg:col-span-1 lg:row-span-4 order-first   bg-[url('./profile-blue.jpg')] bg-cover bg-no-repeat relative   max-w-sm m-auto md:m-0 md:max-w-none  `}
         >
-          <div
+          <h1
             class="p-2 text-xl font-extrabold text-slate-100/80 absolute text-right bottom-0 right-0 bg-slate-900/70 rounded-lg m-2"
           >
             Luis Santiago
-          </div>
+          </h1>
           <img
             src="./profile-blue.jpg"
             alt=""
@@ -31,41 +31,91 @@ const gridBlockTW =
           />
         </div>
         <div
-          class={`${gridBlockTW} md:col-span-2 md:row-span-6 overflow-clip bg-[url('./grid-blue/row-1-column-1.jpg')] bg-cover bg-no-repeat relative`}
+          class={`${gridBlockTW} md:col-span-4 lg:col-span-2 lg:row-span-6 bg-[url('./grid-blue/row-1-column-1.jpg')] order-2 md:order-3 lg:order-2`}
         >
-          01 - Summary/Hero
-          <h1>Luis Santiago</h1>
-          <small>@lusanco</small>
+          <div
+            class="h-full overflow-y-auto p-2 text-sm text-pretty text-center md:text-wrap items-center justify-center flex flex-col"
+          >
+            <h2 class="font-extrabold text-xl">About Me</h2>
+            <br />
+            <p>
+              I am a Software Engineer with a focus on Front-End Web
+              Development, complemented by a background in Administrative
+              Assistance.
+            </p>
+            <br />
+            <p>
+              Outside coding, I enjoy hobbies that spark my imagination, like
+              reading Manhwa and Webtoons, watching anime, and gaming.
+            </p>
+            <br />
+            <p>
+              These days, I often prefer the quiet escape of reading when I’m
+              alone. However, when a friend invites me to play online, I happily
+              dive back into the gaming world for a while.
+            </p>
+          </div>
         </div>
         <div
-          class={`${gridBlockTW} md:row-span-8  overflow-clip bg-[url('./grid-blue/row-1-column-2.jpg')] bg-cover bg-no-repeat relative`}
+          class={`${gridBlockTW} md:col-span-2 order-3 md:order-2 lg:order-3 lg:col-span-1 lg:row-span-8 bg-[url('./grid-blue/row-1-column-2.jpg')]  `}
         >
-          03 - About/Contact
+          <div
+            class="h-full overflow-y-auto p-2 text-sm text-pretty text-center md:text-wrap items-center justify-center flex flex-col"
+          >
+            <h2 class="font-extrabold text-xl">Skills</h2>
+            <br />
+            <p>Languages: JavaScript, TypeScript, HTML, CSS</p>
+            <br />
+            <p>Frameworks: TailwindCSS, DaisyUI, Svelte, Axios</p>
+            <br />
+            <p>Tools: Git, GitHub, npm, Vite, VS Code, Trello</p>
+            <br />
+            <p>Platforms: HostGator, Linux, macOS, Windows</p>
+            <br />
+            <p>
+              Soft Skills: Cross Team Collaboration, Teamwork, Communication,
+              Problem-Solving, Leadership, Adaptability
+            </p>
+            <!-- <ul>
+              <h3 class="text-xl italic">Languages</h3>
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <br />
+              <h3>Frameworks</h3>
+              <li>Tailwind</li>
+              <li>DaisyUI</li>
+              <li>Astro</li>
+              <li>Svelte</li>
+              <li>Axios</li>
+            </ul> -->
+          </div>
         </div>
         <div
-          class={`${gridBlockTW} md:row-span-4  overflow-clip bg-[url('./grid-blue/row-1-column-3.jpg')] bg-cover bg-no-repeat relative`}
+          class={`${gridBlockTW} md:row-span-1 lg:row-span-4 order-4 md:order-5 lg:order-4   bg-[url('./grid-blue/row-1-column-3.jpg')]  `}
         >
           04 - CV
         </div>
         <div
-          class={`${gridBlockTW} md:col-span-2 md:row-span-4 overflow-clip bg-[url('./grid-blue/row-2-column-1.jpg')] bg-cover bg-no-repeat relative`}
+          class={`${gridBlockTW} md:col-span-4 lg:col-span-2 lg:row-span-4 order-5 md:order-4 lg:order-5  bg-[url('./grid-blue/row-2-column-1.jpg')]  `}
         >
           05
         </div>
         <div
-          class={`${gridBlockTW}  md:row-span-2 overflow-clip bg-[url('./grid-blue/row-2-column-2.jpg')] bg-cover bg-no-repeat relative`}
+          class={`${gridBlockTW} order-6  md:row-span-2  bg-[url('./grid-blue/row-2-column-3.jpg')]  `}
         >
           06
         </div>
         <div
-          class={`${gridBlockTW} md:row-span-2 overflow-clip bg-[url('./grid-blue/row-2-column-3.jpg')] bg-cover bg-no-repeat relative`}
+          class={`${gridBlockTW} order-7 md:row-span-2   bg-[url('./grid-blue/row-2-column-2.jpg')]  `}
         >
           07
         </div>
         <div
-          class={`${gridBlockTW} md:row-span-1 md:col-span-4 overflow-clip bg-[url('./grid-blue/row-3-column-1.jpg')] bg-cover bg-no-repeat relative`}
+          class={`${gridBlockTW} md:row-span-1 md:col-span-4  bg-[url('./grid-blue/row-3-column-1.jpg')] order-last max-h-16`}
         >
-          08
+          <p class="text-center flex flex-col justify-center h-full p-4">
+            Copyright © 2024 828 LLC. All rights reserved.
+          </p>
         </div>
       </div>
     </div>
