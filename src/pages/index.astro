@@ -2,22 +2,22 @@
 import Layout from "../layouts/Layout.astro";
 
 const gridBlockTW =
-  " border border-solid border-slate-700/50 rounded-lg bg-slate-800/40 bg-cover bg-no-repeat relative lg:hover:scale-105 hover:z-50 transition-all duration-150 hover:shadow-xl hover:shadow-slate-950/50 overflow-clip hover:border-slate-100/70 hover:border-4";
+  " border border-solid border-slate-700/50 rounded-lg bg-slate-800/40 bg-cover bg-no-repeat relative   hover:z-50 transition-all duration-150 hover:shadow-xl hover:shadow-slate-950/50 overflow-clip hover:border-slate-100/70 lg:hover:border-2";
 ---
 
 <Layout>
   <!-- App -->
   <div
-    class="min-h-screen p-4 md:py-8 bg-[url('./banner-blue.jpg')] bg-cover bg-fixed bg-repeat flex flex-col justify-center"
+    class="min-h-screen p-4 sm-md:py-8 bg-[url('./banner-blue.jpg')] bg-cover bg-fixed bg-repeat flex flex-col justify-center"
   >
     <!-- Wrapper for Centered Content -->
     <div class="relative flex flex-col">
       <!-- Grid Container -->
       <div
-        class="max-w-4xl m-auto w-full grid grid-cols-1 md:grid-cols-4 md:grid-rows-12 gap-2"
+        class="max-w-5xl m-auto w-full grid grid-cols-1 sm-md:grid-cols-4 lg:grid-rows-8 gap-2"
       >
         <div
-          class={`${gridBlockTW} md:col-span-2 lg:col-span-1 lg:row-span-4 order-first   bg-[url('./profile-blue.jpg')] bg-cover bg-no-repeat relative   max-w-sm m-auto md:m-0 md:max-w-none  `}
+          class={`${gridBlockTW} sm-md:col-span-2  md:row-span-2 md:col-span-1 order-first bg-[url('./profile-blue.jpg')] bg-cover bg-no-repeat relative m-auto`}
         >
           <h1
             class="p-2 text-xl font-extrabold text-slate-100/80 absolute text-right bottom-0 right-0 bg-slate-900/70 rounded-lg m-2"
@@ -31,10 +31,10 @@ const gridBlockTW =
           />
         </div>
         <div
-          class={`${gridBlockTW} md:col-span-4 lg:col-span-2 lg:row-span-6 bg-[url('./grid-blue/row-1-column-1.jpg')] order-2 md:order-3 lg:order-2`}
+          class={`${gridBlockTW} sm-md:col-span-4 lg:col-span-2 lg:row-span-2 bg-[url('./grid-blue/row-1-column-1.jpg')] order-2 sm-md:order-3 md:order-4 lg:order-2`}
         >
           <div
-            class="h-full overflow-y-auto p-2 text-sm text-pretty text-center md:text-wrap items-center justify-center flex flex-col"
+            class="h-full overflow-y-auto p-2 text-sm text-pretty text-center sm-md:text-wrap items-center justify-center flex flex-col max-w-lg lg:max-w-none m-auto"
           >
             <h2 class="font-extrabold text-xl">About Me</h2>
             <br />
@@ -57,16 +57,16 @@ const gridBlockTW =
           </div>
         </div>
         <div
-          class={`${gridBlockTW} md:col-span-2 order-3 md:order-2 lg:order-3 lg:col-span-1 lg:row-span-8 bg-[url('./grid-blue/row-1-column-2.jpg')]  `}
+          class={`${gridBlockTW} sm-md:col-span-4 order-3 sm-md:order-3 md:order-5 lg:order-3 lg:col-span-1 lg:row-span-3 bg-[url('./grid-blue/row-1-column-2.jpg')]  `}
         >
           <div
-            class="h-full overflow-y-auto p-2 text-sm text-pretty text-center md:text-wrap items-center justify-center flex flex-col"
+            class="h-full overflow-y-auto p-2 text-sm text-pretty text-center sm-md:text-wrap items-center justify-center flex flex-col max-w-lg lg:max-w-none m-auto"
           >
             <h2 class="font-extrabold text-xl">Skills</h2>
             <br />
             <p>Languages: JavaScript, TypeScript, HTML, CSS</p>
             <br />
-            <p>Frameworks: TailwindCSS, DaisyUI, Svelte, Axios</p>
+            <p>Frameworks: TailwindCSS, DaisyUI, Svelte, Astro, Axios</p>
             <br />
             <p>Tools: Git, GitHub, npm, Vite, VS Code, Trello</p>
             <br />
@@ -91,30 +91,80 @@ const gridBlockTW =
           </div>
         </div>
         <div
-          class={`${gridBlockTW} md:row-span-1 lg:row-span-4 order-4 md:order-5 lg:order-4   bg-[url('./grid-blue/row-1-column-3.jpg')]  `}
+          class={`${gridBlockTW} sm-md:col-span-2 sm-md:row-span-2 md:col-span-1 lg:row-span-1 order-4 sm-md:order-2 lg:order-5 bg-[url('./grid-blue/row-1-column-3.jpg')] lg:max-h-none`}
         >
-          04 - CV
+          <div
+            class="h-full overflow-y-auto p-2 text-sm text-pretty text-center sm-md:text-wrap items-center justify-center flex flex-col"
+          >
+            <h2 class="font-extrabold text-xl">Resume</h2>
+            <br />
+
+            <a
+              download=""
+              href="/resume/2024-12-28 (Luis Santiago) CV.pdf"
+              class="p-4 bg-slate-200 text-slate-800/80 font-extrabold rounded-lg"
+              >Download CV</a
+            >
+          </div>
         </div>
         <div
-          class={`${gridBlockTW} md:col-span-4 lg:col-span-2 lg:row-span-4 order-5 md:order-4 lg:order-5  bg-[url('./grid-blue/row-2-column-1.jpg')]  `}
+          class={`${gridBlockTW} sm-md:col-span-4 lg:col-span-4 lg:row-span-5 order-5 sm-md:order-4 md:order-6  bg-[url('./grid-blue/row-2-column-1.jpg')]  `}
         >
-          05
+          <div
+            class="h-full overflow-y-auto p-2 text-sm text-pretty text-center sm-md:text-wrap items-center justify-center flex flex-col"
+          >
+            <h2 class="font-extrabold text-xl">Projects</h2>
+            <br />
+            <div>Cards go here</div>
+          </div>
         </div>
         <div
-          class={`${gridBlockTW} order-6  md:row-span-2  bg-[url('./grid-blue/row-2-column-3.jpg')]  `}
+          class={`${gridBlockTW} order-6 md:order-3 lg:order-4 sm-md:col-span-4 md:col-span-2 md:row-span-2 lg:col-span-2 lg:row-span-1  bg-[url('./grid-blue/row-2-column-3.jpg')] sm-md:max-h-40 md:max-h-none`}
         >
-          06
+          <div
+            class="h-full overflow-y-auto p-2 text-sm text-pretty text-center sm-md:text-wrap items-center justify-center flex flex-col w-full"
+          >
+            <h2 class="font-extrabold text-xl">Contacts</h2>
+            <br />
+
+            <div
+              class="flex flex-wrap w-full max-w-sm justify-between md:px-4 lg:p-0"
+            >
+              <a
+                href="mailto:lasc1026@gmail.com
+"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="./icons/email.svg" alt="email" class="w-14 h-14" />
+              </a>
+              <a
+                href="https://github.com/Lusanco"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="./icons/github.svg" alt="github" class="w-14 h-14" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/lusanco/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="./icons/linkedin.svg"
+                  alt="linkedin"
+                  class="w-14 h-14"
+                />
+              </a>
+            </div>
+          </div>
         </div>
+
         <div
-          class={`${gridBlockTW} order-7 md:row-span-2   bg-[url('./grid-blue/row-2-column-2.jpg')]  `}
-        >
-          07
-        </div>
-        <div
-          class={`${gridBlockTW} md:row-span-1 md:col-span-4  bg-[url('./grid-blue/row-3-column-1.jpg')] order-last max-h-16`}
+          class={` sm-md:row-span-1 sm-md:col-span-4  bg-[url('./grid-blue/row-3-column-1.jpg')] order-last max-h-16  border lg:border-2 border-solid border-slate-700/50 rounded-lg bg-slate-800/40 bg-cover bg-no-repeat relative hover:z-50 transition-all duration-150 hover:shadow-xl hover:shadow-slate-950/50 overflow-clip hover:border-slate-100/70`}
         >
           <p class="text-center flex flex-col justify-center h-full p-4">
-            Copyright © 2024 828 LLC. All rights reserved.
+            Copyright © 2024 Lusanco. All rights reserved. Built with Astro.
           </p>
         </div>
       </div>
