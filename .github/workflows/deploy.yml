@@ -3,45 +3,38 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main # Trigger the workflow on push to the 'main' branch
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-      # Step 1: Checkout the code from the dev-portfolio-v1 repository
       - name: Checkout dev-portfolio-v1 repo
         uses: actions/checkout@v3
 
-      # Step 2: Set up Node.js environment (adjust the version as needed)
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: "20"
 
-      # Step 3: Install dependencies and build the project (adjust this to your build process)
       - name: Install dependencies and build
         run: |
           npm install
           npm run build
 
-      # Step 4: Clone the lusanco.github.io repository to the workspace
       - name: Clone lusanco.github.io repository
         uses: actions/checkout@v3
         with:
-          repository: Lusanco/lusanco.github.io # The repository to deploy to
-          token: ${{ secrets.GITHUB_TOKEN }} # GitHub automatically provides this token
+          repository: Lusanco/lusanco.github.io
+          token: ${{ secrets.ACTIONS_DEPLOY_KEY }} # Use your PAT here
           path: lusanco.github.io
 
-      # Step 5: Create the docs folder if it doesn't exist, then copy the build output
       - name: Create docs folder and copy build output
         run: |
-          rm -rf lusanco.github.io/docs/*  # Clear the existing docs folder if any content exists
-          mkdir -p lusanco.github.io/docs  # Ensure the docs folder exists
-          cp -r ./docs/* lusanco.github.io/docs  # Copy the contents of the build output
+          rm -rf lusanco.github.io/docs/*
+          mkdir -p lusanco.github.io/docs
+          cp -r ./docs/* lusanco.github.io/docs
 
-      # Step 6: Commit and push changes to lusanco.github.io repository
       - name: Commit and push changes
         run: |
           cd lusanco.github.io
@@ -49,4 +42,4 @@ jobs:
           git config --global user.name "Lusanco"
           git add .
           git commit -m "Deploy new build"
-          git push https://$GITHUB_ACTOR:${{ secrets.ACTIONS_DEPLOY_KEY }}@github.com/Lusanco/lusanco.github.io.git
+          git push https://${{ secrets.ACTIONS_DEPLOY_KEY }}@github.com/Lusanco/lusanco.github.io.git
