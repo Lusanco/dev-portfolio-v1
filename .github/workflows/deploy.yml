@@ -39,7 +39,7 @@ jobs:
         run: |
           rm -rf lusanco.github.io/docs/*  # Clear the existing docs folder if any content exists
           mkdir -p lusanco.github.io/docs  # Ensure the docs folder exists
-          cp -r ./dist/* lusanco.github.io/docs  # Copy the contents of the build output
+          cp -r ./docs/* lusanco.github.io/docs  # Copy the contents of the build output
 
       # Step 6: Commit and push changes to lusanco.github.io repository
       - name: Commit and push changes
