@@ -34,11 +34,12 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }} # GitHub automatically provides this token
           path: lusanco.github.io
 
-      # Step 5: Copy the build output to the docs directory of lusanco.github.io
-      - name: Copy build output to docs directory
+      # Step 5: Create the docs folder if it doesn't exist, then copy the build output
+      - name: Create docs folder and copy build output
         run: |
-          rm -rf lusanco.github.io/docs  # Clear the existing docs folder
-          cp -r ./docs/* lusanco.github.io/docs  # Copy the contents of the build output (dist folder)
+          rm -rf lusanco.github.io/docs/*  # Clear the existing docs folder if any content exists
+          mkdir -p lusanco.github.io/docs  # Ensure the docs folder exists
+          cp -r ./dist/* lusanco.github.io/docs  # Copy the contents of the build output
 
       # Step 6: Commit and push changes to lusanco.github.io repository
       - name: Commit and push changes
@@ -48,4 +49,4 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git add .
           git commit -m "Deploy new build"
-          git push origin gh-pages  # Push to the gh-pages branch of lusanco.github.io
+          git push origin main  # Push to the main branch of lusanco.github.io
