@@ -37,9 +37,10 @@ jobs:
 
       - name: Commit and push changes
         run: |
+          CURRENT_DATE=$(date +"%Y-%m-%d")
           cd lusanco.github.io
           git config --global user.email "lasc1026@gmail.com"
           git config --global user.name "Lusanco"
           git add .
-          git commit -m "Deploy new build"
+          git commit -m "Deploy New Build $CURRENT_DATE"
           git push https://${{ secrets.ACTIONS_DEPLOY_KEY }}@github.com/Lusanco/lusanco.github.io.git
