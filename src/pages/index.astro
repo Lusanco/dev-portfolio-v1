@@ -14,10 +14,10 @@ const gridBlockTW =
     <div class="relative flex flex-col">
       <!-- Grid Container -->
       <div
-        class="max-w-5xl m-auto w-full grid grid-cols-1 sm-md:grid-cols-4 lg:grid-rows-8 gap-2"
+        class="max-w-5xl m-auto w-full grid grid-cols-1 sm-md:grid-cols-4 gap-2"
       >
         <div
-          class={`${gridBlockTW} sm-md:col-span-2  md:row-span-2 md:col-span-1 order-first bg-[url('/profile-blue.jpg')] bg-cover bg-no-repeat relative m-auto`}
+          class={`${gridBlockTW} sm-md:col-span-2  md:row-span-2 md:col-span-1 order-first bg-[url('/profile-blue.jpg')] bg-cover h-full bg-no-repeat relative m-auto`}
         >
           <h1
             class="p-2 text-xl font-extrabold text-slate-100/80 absolute text-right bottom-0 right-0 bg-slate-900/70 rounded-lg m-2"
@@ -27,7 +27,7 @@ const gridBlockTW =
           <img
             src="/profile-blue.jpg"
             alt=""
-            class="m-auto invisible h-full w-full object-cover"
+            class="invisible h-full w-full object-cover"
           />
         </div>
         <div
@@ -116,8 +116,10 @@ const gridBlockTW =
             <h2 class="font-extrabold text-xl">Projects</h2>
             <br />
             <div>
-              Work in progress - testing layouts vs github pages from manual
-              upload of Astro build.
+              <div
+                class="flex flex-col min-w-40 max-w-60 min-h-40 max-h-60 rounded-lg bg-red-400"
+              >
+              </div>
             </div>
           </div>
         </div>
