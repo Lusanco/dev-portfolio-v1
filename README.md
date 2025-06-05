@@ -1,48 +1,27 @@
-# Astro Starter Kit: Basics
+# Developer Portfolio V1: A New Approach to Tracking
 
-```sh
-npm create astro@latest -- --template basics
-```
+Welcome to **Version 1** of my developer portfolio. This repository marks a significant shift in how I manage and iterate on my online presence. Instead of overwriting previous designs, I'm now maintaining **distinct, versioned repositories** for each major portfolio iteration. This new strategy allows for better historical tracking and streamlined deployments using **GitHub Actions**.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+Crucially, this is also my **first portfolio hosted directly on GitHub Pages**, moving away from external hosting platforms like HostGator. This change further integrates the development and deployment workflow within GitHub.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+This iteration showcases a clean, **bento-style layout** crafted with the modern web framework, **Astro.js**. It's designed to be minimal, highly performant, and responsively display my work, with styling heavily driven by **Tailwind CSS**.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+---
 
-## 🚀 Project Structure
+### See It Live
 
-Inside of your Astro project, you'll see the following folders and files:
+**[lusanco.github.io](https://lusanco.github.io/)**
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+---
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+### Why "V1"?
 
-## 🧞 Commands
+This designation signifies the first portfolio built under a new, structured approach to versioning and deployment. Future iterations will reside in their own dedicated repositories, making it easier to manage and showcase the evolution of my work over time.
 
-All commands are run from the root of the project, from a terminal:
+### Technologies Used
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- **Astro.js:** For building a fast, content-focused site.
+- **Tailwind CSS:** For efficient and highly customizable styling.
+- **Minimalist / Bento-Style Design:** Emphasizing clear, organized content presentation.
+- **GitHub Pages:** For integrated and automated hosting directly from the repository.
+- **GitHub Actions:** For automated deployment to GitHub Pages.
