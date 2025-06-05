@@ -1,0 +1,67 @@
+.grid-block {
+  @apply relative transition-all duration-150 bg-no-repeat bg-cover border border-solid rounded-lg border-slate-700/50 bg-slate-800/40 hover:z-50 hover:shadow-xl hover:shadow-slate-950/50 overflow-clip hover:border-slate-100/70 lg:hover:border-2;
+}
+
+.app {
+  @apply min-h-screen text-slate-200/80 font-semibold p-4 sm-md:py-8 bg-[url('/banner-blue.jpg')] bg-cover bg-fixed bg-repeat flex flex-col justify-center;
+}
+
+.center-wrapper {
+  @apply relative flex flex-col;
+}
+
+.grid-container {
+  @apply grid w-full max-w-5xl grid-cols-1 gap-2 m-auto sm-md:grid-cols-4;
+}
+
+.grid-order-first {
+  @apply sm-md:col-span-2 sm-md:row-span-3 md:col-span-1
+          md:row-span-4
+          lg:row-span-2
+          order-first bg-[url('/profile-blue.jpg')] bg-cover bg-no-repeat grid-block;
+}
+
+.grid-order-two {
+  @apply sm-md:col-span-4 lg:col-span-2 lg:row-span-2 bg-[url('/grid-blue/row-1-column-1.jpg')] order-2 sm-md:order-3 md:order-4 lg:order-2 grid-block;
+}
+
+.grid-order-two-container {
+  @apply flex flex-col items-center justify-center h-full max-w-lg p-2 m-auto overflow-y-auto text-sm text-center text-pretty sm-md:text-wrap lg:max-w-none;
+}
+
+.grid-order-three {
+  @apply sm-md:col-span-4 order-3 sm-md:order-3 md:order-5 lg:order-3 lg:col-span-1 lg:row-span-3 bg-[url('/grid-blue/row-1-column-2.jpg')] grid-block;
+}
+
+.grid-order-three-container {
+  @apply flex flex-col items-center justify-center h-full max-w-lg p-2 m-auto overflow-y-auto text-sm text-center text-pretty sm-md:text-wrap lg:max-w-none;
+}
+
+.grid-order-four {
+  @apply sm-md:col-span-2 sm-md:row-span-3 md:col-span-1
+          md:row-span-4 lg:row-span-1 order-4 sm-md:order-2 lg:order-5 bg-[url('/grid-blue/row-1-column-3.jpg')] lg:max-h-none grid-block;
+}
+
+.grid-order-four-container {
+  @apply flex flex-col items-center justify-center h-full p-2 overflow-y-auto text-sm text-center text-pretty sm-md:text-wrap;
+}
+
+.grid-order-five {
+  @apply sm-md:col-span-4 lg:col-span-4 lg:row-span-5 order-5 sm-md:order-4 md:order-6 bg-[url('/grid-blue/row-2-column-1.jpg')] grid-block;
+}
+
+.grid-order-five-container {
+  @apply flex flex-col items-center justify-center h-full p-2 overflow-y-auto text-sm text-center text-pretty sm-md:text-wrap;
+}
+
+.grid-order-six {
+  @apply order-6 md:order-3 lg:order-4 sm-md:col-span-4 md:col-span-2 md:row-span-4 lg:col-span-2 lg:row-span-1 bg-[url('/grid-blue/row-2-column-3.jpg')] sm-md:max-h-40 md:max-h-none grid-block;
+}
+
+.grid-order-six-container {
+  @apply flex flex-col items-center justify-center w-full h-full p-2 overflow-y-auto text-sm text-center text-pretty sm-md:text-wrap;
+}
+
+.grid-order-seven {
+  @apply sm-md:row-span-1 sm-md:col-span-4 bg-[url('/grid-blue/row-3-column-1.jpg')] order-last max-h-16 grid-block;
+}

@@ -1,45 +1,33 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
-const gridBlockTW =
-  " border border-solid border-slate-700/50 rounded-lg bg-slate-800/40 bg-cover bg-no-repeat relative   hover:z-50 transition-all duration-150 hover:shadow-xl hover:shadow-slate-950/50 overflow-clip hover:border-slate-100/70 lg:hover:border-2";
+import "../../src/styles/main.css";
 ---
 
 <Layout>
   <!-- App -->
-  <div
-    class="min-h-screen text-slate-200/80 font-semibold p-4 sm-md:py-8 bg-[url('/banner-blue.jpg')] bg-cover bg-fixed bg-repeat flex flex-col justify-center"
-  >
+  <div class="app">
     <!-- Wrapper for Centered Content -->
-    <div class="relative flex flex-col">
+    <div class="center-wrapper">
       <!-- Grid Container -->
-      <div
-        class="max-w-5xl m-auto w-full grid grid-cols-1 sm-md:grid-cols-4 gap-2"
-      >
-        <div
-          class={`${gridBlockTW} sm-md:col-span-2 sm-md:row-span-3   md:col-span-1 
-          md:row-span-4
-          lg:row-span-2
-          order-first bg-[url('/profile-blue.jpg')] bg-cover bg-no-repeat`}
-        >
+      <div class="grid-container">
+        <!-- Grid Order First -->
+        <div class="grid-order-first">
           <h1
-            class="p-2 text-xl font-extrabold text-slate-100/80 absolute text-right bottom-0 right-0 bg-slate-900/70 rounded-lg m-2"
+            class="absolute bottom-0 right-0 p-2 m-2 text-xl font-extrabold text-right rounded-lg text-slate-100/80 bg-slate-900/70"
           >
             Luis Santiago
           </h1>
           <img
             src="/profile-blue.jpg"
             alt=""
-            class="invisible min-h-full w-full object-cover"
+            class="invisible object-cover w-full min-h-full"
           />
         </div>
-        <div
-          class={`${gridBlockTW} sm-md:col-span-4 lg:col-span-2 lg:row-span-2 bg-[url('/grid-blue/row-1-column-1.jpg')] order-2 sm-md:order-3 md:order-4 lg:order-2`}
-        >
-          <div
-            class="h-full overflow-y-auto p-2 text-sm text-pretty text-center sm-md:text-wrap items-center justify-center flex flex-col max-w-lg lg:max-w-none m-auto"
-          >
-            <h2 class="font-extrabold text-xl">About Me</h2>
+
+        <!-- Grid Order Two -->
+        <div class="grid-order-two">
+          <div class="grid-order-two-container">
+            <h2 class="text-xl font-extrabold">About Me</h2>
             <br />
             <p>
               I’m a Software Developer specializing in Front-End Web
@@ -58,13 +46,11 @@ const gridBlockTW =
             </p>
           </div>
         </div>
-        <div
-          class={`${gridBlockTW} sm-md:col-span-4 order-3 sm-md:order-3 md:order-5 lg:order-3 lg:col-span-1 lg:row-span-3 bg-[url('/grid-blue/row-1-column-2.jpg')]  `}
-        >
-          <div
-            class="h-full overflow-y-auto p-2 text-sm text-pretty text-center sm-md:text-wrap items-center justify-center flex flex-col max-w-lg lg:max-w-none m-auto"
-          >
-            <h2 class="font-extrabold text-xl">Skills</h2>
+
+        <!-- Grid Order Three -->
+        <div class="grid-order-three">
+          <div class="grid-order-three-container">
+            <h2 class="text-xl font-extrabold">Skills</h2>
             <br />
             <p>Languages: JavaScript, TypeScript, Bash Scripting, HTML, CSS</p>
             <br />
@@ -81,110 +67,105 @@ const gridBlockTW =
             </p>
           </div>
         </div>
-        <div
-          class={`${gridBlockTW} sm-md:col-span-2 sm-md:row-span-3 md:col-span-1
-          md:row-span-4 lg:row-span-1 order-4 sm-md:order-2 lg:order-5 bg-[url('/grid-blue/row-1-column-3.jpg')] lg:max-h-none`}
-        >
-          <div
-            class="h-full overflow-y-auto p-2 text-sm text-pretty text-center sm-md:text-wrap items-center justify-center flex flex-col"
-          >
-            <h2 class="font-extrabold text-xl">Resume</h2>
+
+        <!-- Grid Order Four -->
+        <div class="grid-order-four">
+          <div class="grid-order-four-container">
+            <h2 class="text-xl font-extrabold">Resume</h2>
             <br />
 
             <a
               download=""
               href="/resume/2025_05_26_Luis_Santiago_Resume.pdf"
-              class="p-4 bg-slate-200 text-slate-800/80 font-extrabold rounded-lg"
+              class="p-4 font-extrabold rounded-lg bg-slate-200 text-slate-800/80"
               >Download</a
             >
           </div>
         </div>
-        <div
-          class={`${gridBlockTW} sm-md:col-span-4 lg:col-span-4 lg:row-span-5 order-5 sm-md:order-4 md:order-6  bg-[url('/grid-blue/row-2-column-1.jpg')]  `}
-        >
-          <div
-            class="h-full overflow-y-auto p-2 text-sm text-pretty text-center sm-md:text-wrap items-center justify-center flex flex-col"
-          >
-            <h2 class="font-extrabold text-xl">Projects</h2>
+
+        <!-- Grid Order Five -->
+        <div class="grid-order-five">
+          <div class="grid-order-five-container">
+            <h2 class="text-xl font-extrabold">Projects</h2>
             <br />
             <div
-              class="w-full h-full flex flex-wrap gap-2 justify-center items-center"
+              class="flex flex-wrap items-center justify-center w-full h-full gap-2"
             >
               <div
-                class="w-full max-w-80 h-full max-h-60 text-slate-950/70 font-extrabold"
+                class="w-full h-full font-extrabold max-w-80 max-h-60 text-slate-950/70"
               >
                 <div
                   class="min-h-40 rounded-t-lg bg-[url('/screenshots/alpinejs-static-website.png')] bg-cover bg-center bg-no-repeat relative m-auto"
                 >
                 </div>
-                <div class="min-h-20 bg-slate-200 rounded-b-lg overflow-clip">
-                  <h2 class="min-h-8 flex flex-col justify-center">
+                <div class="rounded-b-lg min-h-20 bg-slate-200 overflow-clip">
+                  <h2 class="flex flex-col justify-center min-h-8">
                     AplineJS Static Website
                   </h2>
-                  <div class="min-h-12 flex justify-evenly">
+                  <div class="flex min-h-12 justify-evenly">
                     <a
                       href="https://github.com/Lusanco/alpinejs-static-website"
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="w-full border-t border-r border-slate-950/70 items-center justify-center flex flex-col"
+                      class="flex flex-col items-center justify-center w-full border-t border-r border-slate-950/70"
                       >GitHub</a
                     >
                     <a
                       href="https://lusanco.github.io/alpinejs-static-website/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="w-full border-t border-l border-slate-950/70 items-center justify-center flex flex-col"
+                      class="flex flex-col items-center justify-center w-full border-t border-l border-slate-950/70"
                       >Live Demo</a
                     >
                   </div>
                 </div>
               </div>
               <div
-                class="w-full max-w-80 h-full max-h-60 text-slate-950/70 font-extrabold"
+                class="w-full h-full font-extrabold max-w-80 max-h-60 text-slate-950/70"
               >
                 <div
                   class="min-h-40 rounded-t-lg bg-[url('/screenshots/palitaspr.png')] bg-cover bg-center bg-no-repeat relative m-auto"
                 >
                 </div>
-                <div class="min-h-20 bg-slate-200 rounded-b-lg overflow-clip">
-                  <h2 class="min-h-8 flex flex-col justify-center">
+                <div class="rounded-b-lg min-h-20 bg-slate-200 overflow-clip">
+                  <h2 class="flex flex-col justify-center min-h-8">
                     PalitasPR
                   </h2>
-                  <div class="min-h-12 flex justify-evenly">
+                  <div class="flex min-h-12 justify-evenly">
                     <a
                       href="https://github.com/Lusanco/palitaspr"
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="w-full border-t border-slate-950/70 items-center justify-center flex flex-col"
+                      class="flex flex-col items-center justify-center w-full border-t border-slate-950/70"
                       >GitHub</a
                     >
                   </div>
                 </div>
               </div>
               <div
-                class="w-full max-w-80 h-full max-h-60 text-slate-950/70 font-extrabold"
+                class="w-full h-full font-extrabold max-w-80 max-h-60 text-slate-950/70"
               >
                 <div
                   class="min-h-40 rounded-t-lg bg-[url('/screenshots/svelte-hvac-portfolio.png')] bg-cover bg-center bg-no-repeat relative m-auto"
                 >
                 </div>
-                <div class="min-h-20 bg-slate-200 rounded-b-lg overflow-clip">
-                  <h2 class="min-h-8 flex flex-col justify-center">
+                <div class="rounded-b-lg min-h-20 bg-slate-200 overflow-clip">
+                  <h2 class="flex flex-col justify-center min-h-8">
                     Svelte HVAC Portfolio
                   </h2>
-                  <div class="min-h-12 flex justify-evenly">
+                  <div class="flex min-h-12 justify-evenly">
                     <a
                       href="https://github.com/Lusanco/svelte-hvac-portfolio"
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="w-full border-t border-r border-slate-950/70 items-center justify-center flex flex-col"
+                      class="flex flex-col items-center justify-center w-full border-t border-r border-slate-950/70"
                       >GitHub</a
                     >
                     <a
                       href="https://lusanco.github.io/svelte-hvac-portfolio/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="w-full border-t border-l border-slate-950/70 items-center justify-center flex flex-col"
+                      class="flex flex-col items-center justify-center w-full border-t border-l border-slate-950/70"
                       >Live Demo</a
                     >
                   </div>
@@ -193,14 +174,12 @@ const gridBlockTW =
             </div>
           </div>
         </div>
-        <div
-          class={`${gridBlockTW} order-6 md:order-3 lg:order-4 sm-md:col-span-4 md:col-span-2 md:row-span-4 lg:col-span-2 lg:row-span-1  bg-[url('/grid-blue/row-2-column-3.jpg')] sm-md:max-h-40 md:max-h-none`}
-        >
-          <div
-            class="h-full overflow-y-auto p-2 text-sm text-pretty text-center sm-md:text-wrap items-center justify-center flex flex-col w-full"
-          >
+
+        <!-- Grid Order Six -->
+        <div class="grid-order-six">
+          <div class="grid-order-six-container">
             <div
-              class="flex flex-wrap w-full max-w-sm justify-between md:px-4 lg:p-0"
+              class="flex flex-wrap justify-between w-full max-w-sm md:px-4 lg:p-0"
             >
               <a
                 href="mailto:lasc1026@gmail.com
@@ -232,10 +211,9 @@ const gridBlockTW =
           </div>
         </div>
 
-        <div
-          class={` sm-md:row-span-1 sm-md:col-span-4  bg-[url('/grid-blue/row-3-column-1.jpg')] order-last max-h-16  border lg:border-2 border-solid border-slate-700/50 rounded-lg bg-slate-800/40 bg-cover bg-no-repeat relative hover:z-50 transition-all duration-150 hover:shadow-xl hover:shadow-slate-950/50 overflow-clip hover:border-slate-100/70`}
-        >
-          <p class="text-center flex justify-center h-full p-4">
+        <!-- Grid Order Seven -->
+        <div class="grid-order-seven">
+          <p class="flex justify-center h-full p-4 text-center">
             Copyright © 2025 Lusanco. All rights reserved.
           </p>
         </div>
