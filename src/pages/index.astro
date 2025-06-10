@@ -1,6 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import "../../src/styles/main.css";
+import GridFirst from "../components/GridFirst.astro";
+import GridTwo from "../components/GridTwo.astro";
+import GridThree from "../components/GridThree.astro";
+import GridFour from "../components/GridFour.astro";
+import GridFive from "../components/GridFive.astro";
+import GridSix from "../components/GridSix.astro";
+import GridLast from "../components/GridLast.astro";
 ---
 
 <Layout>
@@ -10,213 +17,13 @@ import "../../src/styles/main.css";
     <div class="center-wrapper">
       <!-- Grid Container -->
       <div class="grid-container">
-        <!-- Grid Order First -->
-        <div class="grid-order-first">
-          <h1
-            class="absolute bottom-0 right-0 p-2 m-2 text-xl font-extrabold text-right rounded-lg text-slate-100/80 bg-slate-900/70"
-          >
-            Luis Santiago
-          </h1>
-          <img
-            src="/profile-blue.jpg"
-            alt=""
-            class="invisible object-cover w-full min-h-full"
-          />
-        </div>
-
-        <!-- Grid Order Two -->
-        <div class="grid-order-two">
-          <div class="grid-order-two-container">
-            <h2 class="text-xl font-extrabold">About Me</h2>
-            <br />
-            <p>
-              I’m a Software Developer specializing in Front-End Web
-              Development, with experience in building and deploying web
-              applications, integrating APIs, and working with databases. I
-              enjoy solving problems, collaborating with teams, and leveraging
-              modern frameworks and tools to create efficient, user-friendly
-              solutions.
-            </p>
-            <br />
-            <p>
-              Outside of coding, I find inspiration in storytelling—whether
-              through Manhwa, Webtoons, anime, or gaming. Lately, I’ve been
-              enjoying the quiet escape of reading, but I never turn down a good
-              online match with friends.
-            </p>
-          </div>
-        </div>
-
-        <!-- Grid Order Three -->
-        <div class="grid-order-three">
-          <div class="grid-order-three-container">
-            <h2 class="text-xl font-extrabold">Skills</h2>
-            <br />
-            <p>Languages: JavaScript, TypeScript, Bash Scripting, HTML, CSS</p>
-            <br />
-            <p>Frameworks: TailwindCSS, DaisyUI, Svelte, Axios</p>
-            <br />
-            <p>
-              Tools: Git, GitHub, Node Package Manager (NPM), Vite, VS Code,
-              Trello
-            </p>
-            <br />
-            <p>
-              Soft Skills: Communication, Problem-Solving, Leadership, Team
-              Collaboration, Adaptability
-            </p>
-          </div>
-        </div>
-
-        <!-- Grid Order Four -->
-        <div class="grid-order-four">
-          <div class="grid-order-four-container">
-            <h2 class="text-xl font-extrabold">Resume</h2>
-            <br />
-
-            <a
-              download=""
-              href="/resume/2025_05_26_Luis_Santiago_Resume.pdf"
-              class="p-4 font-extrabold rounded-lg bg-slate-200 text-slate-800/80"
-              >Download</a
-            >
-          </div>
-        </div>
-
-        <!-- Grid Order Five -->
-        <div class="grid-order-five">
-          <div class="grid-order-five-container">
-            <h2 class="text-xl font-extrabold">Projects</h2>
-            <br />
-            <div
-              class="flex flex-wrap items-center justify-center w-full h-full gap-2"
-            >
-              <div
-                class="w-full h-full font-extrabold max-w-80 max-h-60 text-slate-950/70"
-              >
-                <div
-                  class="min-h-40 rounded-t-lg bg-[url('/screenshots/alpinejs-static-website.png')] bg-cover bg-center bg-no-repeat relative m-auto"
-                >
-                </div>
-                <div class="rounded-b-lg min-h-20 bg-slate-200 overflow-clip">
-                  <h2 class="flex flex-col justify-center min-h-8">
-                    AplineJS Static Website
-                  </h2>
-                  <div class="flex min-h-12 justify-evenly">
-                    <a
-                      href="https://github.com/Lusanco/alpinejs-static-website"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="flex flex-col items-center justify-center w-full border-t border-r border-slate-950/70"
-                      >GitHub</a
-                    >
-                    <a
-                      href="https://lusanco.github.io/alpinejs-static-website/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="flex flex-col items-center justify-center w-full border-t border-l border-slate-950/70"
-                      >Live Demo</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div
-                class="w-full h-full font-extrabold max-w-80 max-h-60 text-slate-950/70"
-              >
-                <div
-                  class="min-h-40 rounded-t-lg bg-[url('/screenshots/palitaspr.png')] bg-cover bg-center bg-no-repeat relative m-auto"
-                >
-                </div>
-                <div class="rounded-b-lg min-h-20 bg-slate-200 overflow-clip">
-                  <h2 class="flex flex-col justify-center min-h-8">
-                    PalitasPR
-                  </h2>
-                  <div class="flex min-h-12 justify-evenly">
-                    <a
-                      href="https://github.com/Lusanco/palitaspr"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="flex flex-col items-center justify-center w-full border-t border-slate-950/70"
-                      >GitHub</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div
-                class="w-full h-full font-extrabold max-w-80 max-h-60 text-slate-950/70"
-              >
-                <div
-                  class="min-h-40 rounded-t-lg bg-[url('/screenshots/svelte-hvac-portfolio.png')] bg-cover bg-center bg-no-repeat relative m-auto"
-                >
-                </div>
-                <div class="rounded-b-lg min-h-20 bg-slate-200 overflow-clip">
-                  <h2 class="flex flex-col justify-center min-h-8">
-                    Svelte HVAC Portfolio
-                  </h2>
-                  <div class="flex min-h-12 justify-evenly">
-                    <a
-                      href="https://github.com/Lusanco/svelte-hvac-portfolio"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="flex flex-col items-center justify-center w-full border-t border-r border-slate-950/70"
-                      >GitHub</a
-                    >
-                    <a
-                      href="https://lusanco.github.io/svelte-hvac-portfolio/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="flex flex-col items-center justify-center w-full border-t border-l border-slate-950/70"
-                      >Live Demo</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Grid Order Six -->
-        <div class="grid-order-six">
-          <div class="grid-order-six-container">
-            <div
-              class="flex flex-wrap justify-between w-full max-w-sm md:px-4 lg:p-0"
-            >
-              <a
-                href="mailto:lasc1026@gmail.com
-"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img src="/icons/email.svg" alt="email" class="w-14 h-14" />
-              </a>
-              <a
-                href="https://github.com/Lusanco"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img src="/icons/github.svg" alt="github" class="w-14 h-14" />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/lusanco/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="/icons/linkedin.svg"
-                  alt="linkedin"
-                  class="w-14 h-14"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Grid Order Seven -->
-        <div class="grid-order-seven">
-          <p class="flex justify-center h-full p-4 text-center">
-            Copyright © 2025 Lusanco. All rights reserved.
-          </p>
-        </div>
+        <GridFirst />
+        <GridTwo />
+        <GridThree />
+        <GridFour />
+        <GridFive />
+        <GridSix />
+        <GridLast />
       </div>
     </div>
   </div>
