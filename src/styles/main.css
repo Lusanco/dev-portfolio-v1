@@ -18,11 +18,11 @@
   @apply sm-md:col-span-2 sm-md:row-span-3 md:col-span-1
           md:row-span-4
           lg:row-span-2
-          order-first bg-[url('/profile-blue.jpg')] bg-cover bg-no-repeat grid-block;
+          order-first bg-[url('/profile-blue.jpg')] bg-cover bg-no-repeat;
 }
 
 .grid-order-two {
-  @apply sm-md:col-span-4 lg:col-span-2 lg:row-span-2 bg-[url('/grid-blue/row-1-column-1.jpg')] order-2 sm-md:order-3 md:order-4 lg:order-2 grid-block;
+  @apply sm-md:col-span-4 lg:col-span-2 lg:row-span-2 bg-[url('/grid-blue/row-1-column-1.jpg')] order-2 sm-md:order-3 md:order-4 lg:order-2;
 }
 
 .grid-order-two-container {
@@ -30,7 +30,7 @@
 }
 
 .grid-order-three {
-  @apply sm-md:col-span-4 order-3 sm-md:order-3 md:order-5 lg:order-3 lg:col-span-1 lg:row-span-3 bg-[url('/grid-blue/row-1-column-2.jpg')] grid-block;
+  @apply sm-md:col-span-4 order-3 sm-md:order-3 md:order-5 lg:order-3 lg:col-span-1 lg:row-span-3 bg-[url('/grid-blue/row-1-column-2.jpg')];
 }
 
 .grid-order-three-container {
@@ -39,7 +39,7 @@
 
 .grid-order-four {
   @apply sm-md:col-span-2 sm-md:row-span-3 md:col-span-1
-          md:row-span-4 lg:row-span-1 order-4 sm-md:order-2 lg:order-5 bg-[url('/grid-blue/row-1-column-3.jpg')] lg:max-h-none grid-block;
+          md:row-span-4 lg:row-span-1 order-4 sm-md:order-2 lg:order-5 bg-[url('/grid-blue/row-1-column-3.jpg')] lg:max-h-none;
 }
 
 .grid-order-four-container {
@@ -47,7 +47,7 @@
 }
 
 .grid-order-five {
-  @apply sm-md:col-span-4 lg:col-span-4 lg:row-span-5 order-5 sm-md:order-4 md:order-6 bg-[url('/grid-blue/row-2-column-1.jpg')] grid-block;
+  @apply sm-md:col-span-4 lg:col-span-4 lg:row-span-5 order-5 sm-md:order-4 md:order-6 bg-[url('/grid-blue/row-2-column-1.jpg')];
 }
 
 .grid-order-five-container {
@@ -55,13 +55,13 @@
 }
 
 .grid-order-six {
-  @apply order-6 md:order-3 lg:order-4 sm-md:col-span-4 md:col-span-2 md:row-span-4 lg:col-span-2 lg:row-span-1 bg-[url('/grid-blue/row-2-column-3.jpg')] sm-md:max-h-40 md:max-h-none grid-block;
+  @apply order-6 md:order-3 lg:order-4 sm-md:col-span-4 md:col-span-2 md:row-span-4 lg:col-span-2 lg:row-span-1 bg-[url('/grid-blue/row-2-column-3.jpg')] sm-md:max-h-40 md:max-h-none;
 }
 
 .grid-order-six-container {
   @apply flex flex-col items-center justify-center w-full h-full p-2 overflow-y-auto text-sm text-center text-pretty sm-md:text-wrap;
 }
 
-.grid-order-seven {
-  @apply sm-md:row-span-1 sm-md:col-span-4 bg-[url('/grid-blue/row-3-column-1.jpg')] order-last max-h-16 grid-block;
+.grid-order-last {
+  @apply sm-md:row-span-1 sm-md:col-span-4 bg-[url('/grid-blue/row-3-column-1.jpg')] order-last max-h-16;
 }

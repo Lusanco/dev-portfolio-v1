@@ -1,0 +1,8 @@
+---
+import "../../src/styles/main.css";
+const { classname } = Astro.props;
+---
+
+<section class=`grid-block ${classname}`>
+  <slot />
+</section>
