@@ -1,5 +1,5 @@
 .grid-block {
-  @apply relative transition-all duration-150 bg-no-repeat bg-cover border border-solid rounded-lg border-slate-700/50 bg-slate-800/40 hover:z-50 hover:shadow-xl hover:shadow-slate-950/50 overflow-clip hover:border-slate-100/70 lg:hover:border-2;
+  @apply relative transition-all duration-150 bg-no-repeat bg-cover border-solid rounded-lg border-slate-700/50 bg-slate-800/40 hover:z-50 hover:shadow-xl hover:shadow-slate-950/50 overflow-clip border-2 hover:border-slate-100/70 lg:hover:border-2;
 }
 
 .app {
